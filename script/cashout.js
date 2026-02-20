@@ -28,6 +28,18 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
         alert('Cashout succesful')
         console.log('New balance', newBalance);
         balanceElement.innerText = newBalance;
+        // 1. get history-container
+        const history = document.getElementById('history-container')
+        // 2. new div create korbo
+        const newHistory = document.createElement('div');
+        // 3. add innerHTML in new div
+        newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+            <p>Cash out to ${cashOutNumber}  Taka:${cashOutAmount} success</p>
+            </div>
+        `
+        // 4. append newDiv in history container
+        history.append(newHistory);
     }else{
         // 5.2. True:: show an error alert > return;
         alert('Invalid Pin');

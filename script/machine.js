@@ -25,11 +25,15 @@ function showOnly(id){
     const cashout = document.getElementById('cashout');
     const transfer = document.getElementById('transfer');
     const getBonus = document.getElementById('getBonus');
+    const payBill = document.getElementById('payBill');
+    const history = document.getElementById('history');
     addMoney.classList.add('hidden');
     cashout.classList.add('hidden');
     transfer.classList.add('hidden');
     getBonus.classList.add('hidden');
+    payBill.classList.add('hidden');
+    history.classList.add('hidden');
+
     const selected = document.getElementById(id);
     selected.classList.remove('hidden');
-
 }
