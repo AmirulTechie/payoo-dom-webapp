@@ -13,11 +13,12 @@ document.getElementById('add-money-btn').addEventListener('click', function(){
     }
     // 3. get amount
     const amount = getValueFromInput('add-money-amount');
-    const newBalance = getBalance() + Number(amount);
+    const currentBalance = getBalance()
+    const newBalance = currentBalance + Number(amount);
 
     const pin = getValueFromInput('add-money-pin');
     if(pin === '1234'){
-        alert('Add Money Successful');
+        alert(`Add money from ${bankAccount} Account:${accno} Taka:${amount} successful `);
         setBalance(newBalance);
     }else{
         alert('Invalid pin');
